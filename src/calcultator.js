@@ -22,7 +22,7 @@ export default class Calculator extends React.Component {
 
         const { proteins, glucides, lipides, fibres, poid } = this.state;
 
-        this.state.points = Math.round((proteins / 11 + glucides / 9 + lipides / 4 + fibres / 30) * poid) / 100;
+        this.setState({points: Math.round((proteins / 11 + glucides / 9 + lipides / 4 + fibres / 30) * poid) / 100});
     }
 
     render() {
@@ -32,7 +32,7 @@ export default class Calculator extends React.Component {
         return (
             <section className="section">
                 <div id="app" className="container">
-                    <form role="form">
+                    <form>
                         <div className="field">
                             <label className="label">Protéines</label>
                             <div className="control">
