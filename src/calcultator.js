@@ -31,39 +31,41 @@ export default class Calculator extends React.Component {
 
         return (
             <section className="section">
-                <div id="app" className="container">
+                <div className="container">
                     <form>
                         <div className="field">
                             <label className="label">Protéines</label>
                             <div className="control">
-                                <input name="proteins" className="input" type="number" value={proteins} onChange={this.handleChange} />
+                                <input name="proteins" className="input is-rounded" type="number" value={proteins} onChange={this.handleChange} />
                             </div>
                         </div>
                         <div className="field">
                             <label className="label">Glucides</label>
                             <div className="control">
-                                <input name="glucides" className="input" type="number" value={glucides} onChange={this.handleChange} />
+                                <input name="glucides" className="input is-rounded" type="number" value={glucides} onChange={this.handleChange} />
                             </div>
                         </div>
                         <div className="field">
                             <label className="label">Lipides</label>
                             <div className="control">
-                                <input name="lipides" className="input" type="number" value={lipides} onChange={this.handleChange} />
+                                <input name="lipides" className="input is-rounded" type="number" value={lipides} onChange={this.handleChange} />
                             </div>
                         </div>
                         <div className="field">
                             <label className="label">Fibres</label>
                             <div className="control">
-                                <input name="fibres" className="input" type="number" value={fibres} onChange={this.handleChange} />
+                                <input name="fibres" className="input is-rounded" type="number" value={fibres} onChange={this.handleChange} />
                             </div>
                         </div>
                         <div className="field">
                             <label className="label">Poids en grammes</label>
                             <div className="control">
-                                <input name="poid" className="input" type="number" value={poid} onChange={this.handleChange} />
+                                <input name="poid" className="input is-rounded" type="number" value={poid} onChange={this.handleChange} />
                             </div>
                         </div>
-                        <h2>Points pour {poid} g : <b>{points}</b></h2>
+                        <div className="notification is-info">
+                            Points pour {poid} g : <b>{points}</b>
+                        </div>
                     </form>
                 </div>
             </section>
